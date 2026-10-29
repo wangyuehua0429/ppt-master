@@ -267,7 +267,8 @@ def classify_license(
 
 - `skills/ppt-master/scripts/tests/test_<topic>.py` modules on the standard library `unittest`, run one module at a time: `cd skills/ppt-master/scripts && python3 -m unittest tests.test_<topic>` (`discover` is not supported here)
 - Cases that exercise `scripts/` Python through its public entry points (CLI `main(argv)`, the converter, the checker) on minimal fixtures built inside the test — a short SVG or JSON string, a temporary directory
-- Mocked network calls; never a live provider request or an installed-package assumption beyond `requirements.txt`
+- Mocked network calls; never a live provider request or an installed-package assumption beyond `requirements.txt` and `requirements-test.txt`
+- Test-only fixture dependencies belong in `requirements-test.txt`, not in the runtime dependency list
 
 **Forbidden**:
 

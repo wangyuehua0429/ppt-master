@@ -27,6 +27,12 @@ cd ppt-master
 pip install -r requirements.txt
 ```
 
+To run the regression tests, install the runtime and test dependencies:
+
+```bash
+pip install -r requirements-test.txt
+```
+
 ## Before You Open a PR
 
 PPT Master is solo-maintained with limited review bandwidth. To keep things healthy for everyone:
